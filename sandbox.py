@@ -15,10 +15,11 @@ from collections import Counter
 from mancala.game import game
 from mancala.groups.group_random.action import action as random_action
 from mancala.groups.minmax.action import action as minmax_action
+from mancala.groups.teymi1.mds_action import action as mds_action
 
 
 def play_one_game():
-    result = game(random_action, minmax_action)
+    result = game(random_action, mds_action)
     if result == 0:
         print("Player 0 won")
     elif result == 1:
